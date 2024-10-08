@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -72,88 +73,95 @@ using (var package = new ExcelPackage(new FileInfo(filePath)))
 return searchTerms; // Retorna a lista de termos de busca
 }
 
-// Método para buscar no Google usando Selenium
-private List<SearchResult> SearchGoogle(string searchTerm)
-{
-var searchResults = new List<SearchResult>();
-
-var options = new ChromeOptions();
-options.AddArgument("--start-maximized"); // Abre o navegador em tela cheia
-
-// Configura o ChromeDriver
-using (IWebDriver driver = new ChromeDriver(options))
-{
-    driver.Navigate().GoToUrl("https://www.google.com"); // Acessa o Google
-
-    // Aguarda um pouco para garantir que a página carregou
-    Thread.Sleep(1000); 
-
-            
-        // Cria uma espera explícita de 10 segundos
-        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(1));
-        var acceptButton = wait.Until(drv =>
+        // Método para buscar no Google usando Selenium
+        private List<SearchResult> SearchGoogle(string searchTerm)
         {
-                
-                // Tenta encontrar o botão de aceitar cookies
-                var button = drv.FindElement(By.XPath("//*[@id=\"L2AGLb\"]"));
-                return button; // Retorna o botão se encontrado
-                
-        });
+            var searchResults = new List<SearchResult>();
 
-        if (acceptButton != null) // Se o botão foi encontrado
-        {
-            acceptButton.Click(); // Clica no botão
-        }
-            
+            var options = new ChromeOptions();
+            options.AddArgument("--start-maximized"); // Abre o navegador em tela cheia
 
-    // Encontra a barra de pesquisa e digita o termo de busca
-    var searchBox = driver.FindElement(By.Name("q")); // Encontra a barra de pesquisa
-    searchBox.SendKeys(searchTerm); // Digita o termo de busca
-    searchBox.Submit(); // Submete a busca
-
-    // Espera carregar os resultados
-    WebDriverWait resultsWait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
-    resultsWait.Until(drv => drv.FindElement(By.CssSelector("div.g"))); // Espera os resultados aparecerem
-
-    // Pega os 5 primeiros resultados (títulos, URLs e descrições)
-    var resultElements = driver.FindElements(By.CssSelector("div.g")).Take(5); // Encontra os elementos de resultado
-
-    foreach (var resultElement in resultElements)
-    {
-        try
-        {
-            // Extrai título, URL e descrição dos resultados
-            var titleElement = resultElement.FindElement(By.TagName("h3"));
-            var urlElement = resultElement.FindElement(By.CssSelector("a"));
-            var descriptionElement = resultElement.FindElement(By.CssSelector("span.st"));
-
-            // Cria um novo resultado de pesquisa
-            var result = new SearchResult
+            // Configura o ChromeDriver
+            using (IWebDriver driver = new ChromeDriver(options))
             {
-                SearchTerm = searchTerm,
-                Title = titleElement.Text,
-                Url = urlElement.GetAttribute("href"),
-                Description = descriptionElement.Text
-            };
+                driver.Navigate().GoToUrl("https://www.google.com"); // Acessa o Google
 
-            searchResults.Add(result); // Adiciona o resultado à lista
+                // Aguarda um pouco para garantir que a página carregou
+                Thread.Sleep(1000);
+
+                // Cria uma espera explícita de 2 segundos
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(1));
+                var acceptButton = wait.Until(drv =>
+                {
+                    // Tenta encontrar o botão de aceitar cookies
+                    var button = drv.FindElement(By.XPath("//*[@id=\"L2AGLb\"]"));
+                    return button; // Retorna o botão se encontrado
+                });
+
+                if (acceptButton != null) // Se o botão foi encontrado
+                {
+                    acceptButton.Click(); // Clica no botão
+                }
+
+                // Encontra a barra de pesquisa e digita o termo de busca
+                var searchBox = driver.FindElement(By.Name("q")); // Encontra a barra de pesquisa
+                searchBox.SendKeys(searchTerm); // Digita o termo de busca
+                searchBox.Submit(); // Submete a busca
+
+                // Espera carregar os resultados
+                WebDriverWait resultsWait = new WebDriverWait(driver, TimeSpan.FromSeconds(1));
+                resultsWait.Until(drv => drv.FindElement(By.CssSelector("div.g"))); // Espera os resultados aparecerem
+
+                // Clica na aba "Web" (ajuste o seletor conforme necessário)
+                var webTab = wait.Until(drv => drv.FindElement(By.XPath("//a[@class='nPDzT T3FoJb' and contains(., 'Web')]")));
+                webTab.Click();
+
+                // Aguarda os resultados da aba "Web" carregarem
+                resultsWait.Until(drv => drv.FindElement(By.CssSelector("div.g"))); // Espera os resultados da aba "Web"
+
+                // Pega os 5 primeiros resultados (títulos, URLs e descrições)
+                var resultElements = driver.FindElements(By.CssSelector("div.g")).Take(5); // Encontra os elementos de resultado
+
+                foreach (var resultElement in resultElements)
+                {
+                    try
+                    {
+                        // Extrai título, URL e descrição dos resultados
+                        var titleElement = resultElement.FindElement(By.CssSelector("h3"));
+                        var urlElement = resultElement.FindElement(By.CssSelector("a"));
+                        var descriptionElement = resultElement.FindElement(By.CssSelector(".VwiC3b span")); ;
+
+                        Console.WriteLine("Título: " + titleElement.Text);
+                        Console.WriteLine("URL: " + urlElement.GetAttribute("href"));
+                        Console.WriteLine("Descrição: " + descriptionElement.Text);
+
+                        // Cria um novo resultado de pesquisa
+                        var result = new SearchResult
+                        {
+                            SearchTerm = searchTerm,
+                            Title = titleElement.Text,
+                            Url = urlElement.GetAttribute("href"),
+                            Description = descriptionElement.Text
+                        };
+
+                        searchResults.Add(result); // Adiciona o resultado à lista
+                    }
+                    catch (NoSuchElementException)
+                    {
+                        // Ignora se algum resultado não tiver título ou URL
+                    }
+                }
+            }
+
+            return searchResults; // Retorna a lista de resultados encontrados
         }
-        catch (NoSuchElementException)
-        {
-            // Ignora se algum resultado não tiver título ou URL
-        }
-    }
-}
-
-return searchResults; // Retorna a lista de resultados encontrados
-}
 
 
 
 
 
-// Método para salvar os resultados no Excel
-private void SaveResultsToExcel(List<SearchResult> searchResults, string filePath)
+        // Método para salvar os resultados no Excel
+        private void SaveResultsToExcel(List<SearchResult> searchResults, string filePath)
 {
 using (var package = new ExcelPackage())
 {

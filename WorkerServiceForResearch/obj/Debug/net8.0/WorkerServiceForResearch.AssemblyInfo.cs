@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkerServiceForResearch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e1b856b67a0f5e7ce71a720e64dab88444820c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkerServiceForResearch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkerServiceForResearch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

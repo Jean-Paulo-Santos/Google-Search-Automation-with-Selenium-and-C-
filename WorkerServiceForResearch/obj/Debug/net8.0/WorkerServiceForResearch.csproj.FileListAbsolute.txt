@@ -62,3 +62,4 @@ C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\obj\Debug\net8.0\WorkerServiceForResearch.genruntimeconfig.cache
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\obj\Debug\net8.0\ref\WorkerServiceForResearch.dll
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\WebDriver.Support.dll
+C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\obj\Debug\net8.0\WorkerServiceForResearch.sourcelink.json
