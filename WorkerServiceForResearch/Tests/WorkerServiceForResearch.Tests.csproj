@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<!-- Framework alvo dos testes -->
+		<IsPackable>false</IsPackable>
+		<!-- Esse projeto de testes não será empacotado para distribuição -->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Referência ao projeto principal -->
+		<ProjectReference Include="..\WorkerServiceForResearch\WorkerServiceForResearch.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Pacotes necessários para testes -->
+		<PackageReference Include="xunit" Version="2.4.1" />
+		<!-- Framework de testes xUnit -->
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
+		<!-- Runner para integração com IDEs e CI/CD -->
+		<PackageReference Include="Moq" Version="4.16.1" />
+		<!-- Biblioteca para criação de mocks (dobras) de objetos -->
+		<PackageReference Include="Selenium.WebDriver" Version="4.11.0" />
+		<!-- Selenium para testes de integração com navegador -->
+		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="114.0.5735.90" />
+		<!-- Driver Chrome para os testes -->
+	</ItemGroup>
+
+</Project>

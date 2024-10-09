@@ -73,6 +73,10 @@
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
               "version": "[129.0.6668.8900, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
             }
           },
           "imports": [

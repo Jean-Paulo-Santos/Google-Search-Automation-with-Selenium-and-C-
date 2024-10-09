@@ -3,8 +3,6 @@ C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\obj\Debug\net8.0\WorkerServiceForResearch.AssemblyInfoInputs.cache
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\obj\Debug\net8.0\WorkerServiceForResearch.AssemblyInfo.cs
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\obj\Debug\net8.0\WorkerServiceForResearch.csproj.CoreCompileInputs.cache
-C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\appsettings.json
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
@@ -63,3 +61,9 @@ C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\obj\Debug\net8.0\ref\WorkerServiceForResearch.dll
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\WebDriver.Support.dll
 C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\obj\Debug\net8.0\WorkerServiceForResearch.sourcelink.json
+C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\Config\appsettings.Development.json
+C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\Config\appsettings.json
+C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\xunit.abstractions.dll
+C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\xunit.assert.dll
+C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\xunit.core.dll
+C:\Users\Cliente\source\repos\WorkerServiceForResearch\WorkerServiceForResearch\bin\Debug\net8.0\xunit.execution.dotnet.dll
