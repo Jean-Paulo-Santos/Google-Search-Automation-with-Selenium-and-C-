@@ -14,6 +14,9 @@ namespace WorkerServiceForResearch
         private readonly ILogger<Worker> _logger;
         private readonly GoogleSearch _googleSearch;
 
+        private readonly string _inputFilePath = @"C:\Users\Cliente\source\repos\WorkerServiceForResearch\input.xlsx";
+        private readonly string _outputFilePath = @"C:\Users\Cliente\source\repos\WorkerServiceForResearch\output.xlsx";
+
         public Worker(ILogger<Worker> logger, GoogleSearch googleSearch)
         {
             _logger = logger;
@@ -24,11 +27,8 @@ namespace WorkerServiceForResearch
         {
             _logger.LogInformation("Worker started at: {time}", DateTimeOffset.Now);
 
-            var inputFilePath = @"C:\Users\Cliente\source\repos\WorkerServiceForResearch\input.xlsx";
-            var outputFilePath = @"C:\Users\Cliente\source\repos\WorkerServiceForResearch\output.xlsx";
-
             // Lê os termos de busca do arquivo Excel
-            var searchTerms = ReadSearchTermsFromExcel(inputFilePath);
+            List<string> searchTerms = ReadSearchTermsFromExcel(_inputFilePath);
             var searchResults = new List<SearchResult>();
 
             // Executa as pesquisas e salva os resultados
@@ -38,7 +38,7 @@ namespace WorkerServiceForResearch
                 searchResults.AddRange(results);
             }
 
-            SaveResultsToExcel(searchResults, outputFilePath);
+            SaveResultsToExcel(searchResults, _outputFilePath);
             _logger.LogInformation("Worker completed at: {time}", DateTimeOffset.Now);
             return Task.CompletedTask;
         }

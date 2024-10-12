@@ -1,0 +1,57 @@
+﻿# Ignore arquivos e pastas de compilação
+bin/
+obj/
+out/
+
+# Ignore arquivos temporários e logs
+*.tmp
+*.temp
+*.log
+
+# Ignore arquivos gerados automaticamente pelo Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore diretórios de pacotes NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Ignore pastas e arquivos de dependências do .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore os resultados de testes
+TestResults/
+
+# Ignore as configurações do Visual Studio Code
+.vscode/
+.vscode/*
+
+# Ignore arquivos gerados pelo Rider (se você estiver usando)
+.idea/
+.idea_modules/
+*.iml
+
+# Ignore o arquivo Excel de saída gerado pelo seu código
+output.xlsx
+
+# Ignore o diretório do Selenium Driver, se estiver baixando os drivers dinamicamente
+Driver/
+
+# Ignore o driver do Chrome se você incluir no projeto manualmente
+chromedriver.exe
+
+# Ignore os arquivos temporários do Excel gerados durante a leitura e gravação
+~$*.xlsx
+*.xlk
+
+# Ignore o Recycle Bin do Windows
+$RECYCLE.BIN/
+
+# Ignore arquivos do sistema
+.DS_Store
+Thumbs.db

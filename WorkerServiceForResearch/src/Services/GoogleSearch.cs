@@ -11,7 +11,7 @@ namespace WorkerServiceForResearch
     {
         public List<SearchResult> Search(string searchTerm)
         {
-            var searchResults = new List<SearchResult>();
+            var listSearchResults = new List<SearchResult>();
             var options = new ChromeOptions();
             options.AddArgument("--start-maximized");
 
@@ -27,7 +27,7 @@ namespace WorkerServiceForResearch
                     acceptButton.Click();
                 }
                 catch (NoSuchElementException) { }
-
+                
                 // Realiza a busca
                 var searchBox = driver.FindElement(By.Name("q"));
                 searchBox.SendKeys(searchTerm);
@@ -58,13 +58,13 @@ namespace WorkerServiceForResearch
                             Description = descriptionElement.Text
                         };
 
-                        searchResults.Add(result);
+                        listSearchResults.Add(result);
                     }
                     catch (NoSuchElementException) { }
                 }
             }
 
-            return searchResults;
+            return listSearchResults;
         }
     }
 }

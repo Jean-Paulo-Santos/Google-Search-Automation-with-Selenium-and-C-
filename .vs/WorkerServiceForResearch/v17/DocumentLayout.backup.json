@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|solutionrelative:workerserviceforresearch\\src\\services\\googlesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|c:\\users\\cliente\\source\\repos\\workerserviceforresearch\\workerserviceforresearch\\src\\workerserviceforresearch.tests\\googlesearchintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|solutionrelative:workerserviceforresearch\\src\\workerserviceforresearch.tests\\googlesearchintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|c:\\users\\cliente\\source\\repos\\workerserviceforresearch\\workerserviceforresearch\\src\\workerserviceforresearch.tests\\workertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|solutionrelative:workerserviceforresearch\\src\\workerserviceforresearch.tests\\workertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|c:\\users\\cliente\\source\\repos\\workerserviceforresearch\\workerserviceforresearch\\src\\services\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|solutionrelative:workerserviceforresearch\\src\\services\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|c:\\users\\cliente\\source\\repos\\workerserviceforresearch\\workerserviceforresearch\\src\\services\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|solutionrelative:workerserviceforresearch\\src\\services\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|c:\\users\\cliente\\source\\repos\\workerserviceforresearch\\workerserviceforresearch\\src\\workerserviceforresearch.tests\\workertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|solutionrelative:workerserviceforresearch\\src\\workerserviceforresearch.tests\\workertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|c:\\users\\cliente\\source\\repos\\workerserviceforresearch\\workerserviceforresearch\\src\\workerserviceforresearch.tests\\googlesearchintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|solutionrelative:workerserviceforresearch\\src\\workerserviceforresearch.tests\\googlesearchintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C4D826E-6C37-44BC-8688-D3BD97BDFD7C}|WorkerServiceForResearch\\WorkerServiceForResearch.csproj|c:\\users\\cliente\\source\\repos\\workerserviceforresearch\\workerserviceforresearch\\tests\\workerserviceforresearch.tests.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -42,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "GoogleSearchIntegrationTests.cs",
               "DocumentMoniker": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\WorkerServiceForResearch.Tests\\GoogleSearchIntegrationTests.cs",
               "RelativeDocumentMoniker": "WorkerServiceForResearch\\src\\WorkerServiceForResearch.Tests\\GoogleSearchIntegrationTests.cs",
@@ -55,33 +55,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "WorkerTests.cs",
               "DocumentMoniker": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\WorkerServiceForResearch.Tests\\WorkerTests.cs",
               "RelativeDocumentMoniker": "WorkerServiceForResearch\\src\\WorkerServiceForResearch.Tests\\WorkerTests.cs",
               "ToolTip": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\WorkerServiceForResearch.Tests\\WorkerTests.cs",
               "RelativeToolTip": "WorkerServiceForResearch\\src\\WorkerServiceForResearch.Tests\\WorkerTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T08:58:37.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SearchResult.cs",
               "DocumentMoniker": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\Services\\SearchResult.cs",
               "RelativeDocumentMoniker": "WorkerServiceForResearch\\src\\Services\\SearchResult.cs",
               "ToolTip": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\Services\\SearchResult.cs",
               "RelativeToolTip": "WorkerServiceForResearch\\src\\Services\\SearchResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T08:42:47.518Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\Services\\Program.cs",
               "RelativeDocumentMoniker": "WorkerServiceForResearch\\src\\Services\\Program.cs",
@@ -89,18 +89,17 @@
               "RelativeToolTip": "WorkerServiceForResearch\\src\\Services\\Program.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAUwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T18:18:25.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T18:18:25.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Worker.cs",
               "DocumentMoniker": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\Services\\Worker.cs",
               "RelativeDocumentMoniker": "WorkerServiceForResearch\\src\\Services\\Worker.cs",
               "ToolTip": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\Services\\Worker.cs",
               "RelativeToolTip": "WorkerServiceForResearch\\src\\Services\\Worker.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwCoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T13:56:57.805Z",
               "EditorCaption": ""
@@ -113,7 +112,7 @@
               "RelativeDocumentMoniker": "WorkerServiceForResearch\\src\\Services\\GoogleSearch.cs",
               "ToolTip": "C:\\Users\\Cliente\\source\\repos\\WorkerServiceForResearch\\WorkerServiceForResearch\\src\\Services\\GoogleSearch.cs",
               "RelativeToolTip": "WorkerServiceForResearch\\src\\Services\\GoogleSearch.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwDIAAABtAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T08:56:04.468Z",
               "EditorCaption": ""
