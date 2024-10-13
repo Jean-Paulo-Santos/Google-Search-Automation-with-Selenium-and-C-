@@ -48,14 +48,27 @@ namespace WorkerServiceForResearch
                     {
                         var titleElement = resultElement.FindElement(By.CssSelector("h3"));
                         var urlElement = resultElement.FindElement(By.CssSelector("a"));
-                        var descriptionElement = resultElement.FindElement(By.CssSelector(".VwiC3b span")); ;
+                        var descriptionElement = resultElement.FindElement(By.CssSelector(".VwiC3b"));
+                        string descriptionText = "";
 
+                        // Verifica se há um span interno com uma data
+                        try
+                        {
+                            var spanDateElement = descriptionElement.FindElement(By.CssSelector(".LEwnzc span"));
+                            descriptionText = descriptionElement.Text.Replace(spanDateElement.Text, "").Trim();  // Remove a data
+                        }
+                        catch (NoSuchElementException)
+                        {
+                            descriptionText = descriptionElement.Text;  // Caso não haja data, pega a descrição diretamente
+                        }
+
+                        // Cria o resultado da busca
                         var result = new SearchResult
                         {
                             SearchTerm = searchTerm,
                             Title = titleElement.Text,
                             Url = urlElement.GetAttribute("href"),
-                            Description = descriptionElement.Text
+                            Description = descriptionText
                         };
 
                         listSearchResults.Add(result);
